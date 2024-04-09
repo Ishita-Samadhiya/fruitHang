@@ -8,12 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    var listOfWords = ["buccaneer", "swift", "glorious", "incandescent", "bug", "program"]
+    @IBOutlet var fruitImageView: UIImageView!
+    @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet var letterButtons: [UIButton]!
+    @IBOutlet var correctWordLabel: UILabel!
+    let incorrectMovesAllowed = 6
+    var totalWins = 0
+    var totalLosses = 0
+    @IBAction func letterButtonPressed(_ sender: UIButton) {
+        sender.isEnabled = false
+    }
+    
 }
 
